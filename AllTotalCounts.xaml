@@ -1,0 +1,20 @@
+﻿<Window x:Class="DumbSql.AllTotalCounts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DumbSql"
+        mc:Ignorable="d"
+        Title="AllTotalCounts" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="PricesGrid" GridLinesVisibility="None" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Идентификатор" Binding="{Binding Id}" />
+                <DataGridTextColumn Width="*" Header="Название" Binding="{Binding Name}" />
+                    <DataGridTextColumn Width="*" Header="Стоимость одной" Binding="{Binding SinglPrice}" />
+                <DataGridTextColumn Width="*" Header="Количество заказов" Binding="{Binding TotalCount}" />
+                        <DataGridTextColumn Width="*" Header="Общая стомость" Binding="{Binding TotalPrice}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
